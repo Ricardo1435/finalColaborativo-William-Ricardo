@@ -14,6 +14,12 @@ class EstudiantesController extends Controller
         return view('layouts.registroEstudiante', compact('generos'));
     }
 
+    public function showEstudiante(){
+        $estudiante = Estudiante::all();
+        return view('layouts.listaDeEstudiantes', compact('estudiante'));
+    }
+
+
     public function saveEstudiante(Request $request){
 
         //Validaciones del formulario

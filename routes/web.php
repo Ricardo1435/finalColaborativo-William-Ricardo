@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 Route::get('/estudiantes/index', [\App\Http\Controllers\EstudiantesController::class, 'registerEstudiantes'])->name('estudiantes.index');
 Route::post('/estudiantes/registrar', [\App\Http\Controllers\EstudiantesController::class, 'saveEstudiante'])->name('estudiantes.registrarEstudiante');
+Route::get('/estudiantes/lista', [\App\Http\Controllers\EstudiantesController::class, 'showEstudiante'])->name('estudiantes.listarEstudiantes');
