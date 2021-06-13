@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/estudiantes/index', [\App\Http\Controllers\EstudiantesController::class, 'registerEstudiantes'])->name('estudiantes.index');
+Route::post('/estudiantes/registrar', [\App\Http\Controllers\EstudiantesController::class, 'saveEstudiante'])->name('estudiantes.registrarEstudiante');
